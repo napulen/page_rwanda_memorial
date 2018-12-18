@@ -1,0 +1,80 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to our test
+
+  // Wrapper
+  #wrapper
+
+    // USER INFO
+    #userInfo
+      h2 User Info
+      p
+        strong Name:
+        |  <span id='userInfoName'></span>
+        br
+        strong Age:
+        |  <span id='userInfoAge'></span>
+        br
+        strong Gender:
+        |  <span id='userInfoGender'></span>
+        br
+        strong Location:
+        |  <span id='userInfoLocation'></span>
+    // /USER INFO
+
+    // USER LIST
+    h2 Liste des victimes
+    #userList
+      table
+        thead
+          th Prenom de la personne que soumet le formulaire
+          th Nom de la personne que soumet le formulaire
+          th Email address
+          th Relation avec la victime
+          th Prénom de la victime
+          th Nom de la victime
+          th Prenom du pere de la victime
+          th Nom du pere de la victime
+          th Prenom de la mere de la victime
+          th Nom de la mere de la victime
+          th Date de naissance de la victime
+          th Date de deces de la victime
+          th Lieu de naissance de la victime
+          th Lieu de residence de la victime
+          th Lieu de deces de la victime
+          th Profession et lieu de travail de la victime
+          th Temoignage sur la victime
+          th Circonstances de deces (options)
+          th Delete?
+        tbody
+    // /USER LIST
+
+    // ADD USER
+    h2 Add Victime
+    #addUser
+      fieldset
+        input#inputPrenomVictime(type='text', placeholder='Prénom de la victime')
+        input#inputNomVictime(type='text', placeholder='Nom de la victime')
+        br
+        input#inputPrenomPere(type='text', placeholder='Prénom du pere de la victime')
+        input#inputNomPere(type='text', placeholder='Nom du pere de la victime')
+        input#inputPrenomMere(type='text', placeholder='Prénom de la mere de la victime')
+        input#inputNomMere(type='text', placeholder='Nom de la mere de la victime')
+        br
+        input#inputDateNaissance(type='text', placeholder='Date de naissance de la victime')
+        input#inputDateDeces(type='text', placeholder='Date de décès de la victime')
+        br
+        input#inputLieuNaissance(type='text', placeholder='Lieu de naissance de la victime')
+        input#inputLieuResidence(type='text', placeholder='Lieu de résidence de la victime')
+        input#LieuDeces(type='text', placeholder='Lieu de décès de la victime')
+        br
+        input#inputProfessionVictime(type='text', placeholder='Profession et lieu de travail')
+        input#inputTemoignane(type='text', placeholder='Témoignage sur la victime')
+        input#inputCirconstancesDeces(type='text', placeholder='Circonstances de décès')
+        br
+        button#btnAddUser Add Victime
+    // /ADD USER
+
+  // /WRAPPER
