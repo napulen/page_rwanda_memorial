@@ -37,9 +37,8 @@ sudo ufw enable```
 A demo Node project will run on port ```3000```, and so you may need to open it in ```ufw```
 
 ```
-sudo ufw allow 3000```
-
-
+sudo ufw allow 3000
+```
 
 ### MongoDB
 
@@ -61,25 +60,22 @@ If the package keys are missing, [add them](https://chrisjean.com/fix-apt-get-up
 ```
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 012345thekeynumber6789
 
-sudo apt-get update```
+sudo apt-get update
+```
 
 Finally, install MongoDB
 
 ```
-sudo apt-get install -y mongodb-org```
-
-
-
+sudo apt-get install -y mongodb-org
+```
 
 #### Adjust the firewall
 
-MongoDB's default port is ```27017```. It should be accessible only from certain trusted locations. In case you (don't) want to make it accessible from everywhere:
+MongoDB's default port is ```27017```. It should be accessible only from certain trusted locations. In case you don't want to make it accessible from everywhere:
 
 ```
-sudo ufw allow 27017```
-or from  the same server
+sudo ufw allow from 127.0.0.1/32 to any port 27017
 ```
-sudo ufw allow from 127.0.0.1/32 to any port 27017```
 
 
 #### Run mongo and mongod
