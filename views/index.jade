@@ -7,21 +7,57 @@ block content
   // Wrapper
   #wrapper
 
+
+    // ADD USER
+    h2 Add Victime
+    #addUser
+      fieldset
+        input#inputPrenomSoumeter(type='text', placeholder='Prénom du la personne que soumet le formulaire')
+        input#inputNomSoumeter(type='text', placeholder='Nom du la personne que soumet le formulaire')
+        input#inputEmailSoumeter(type='text', placeholder='Email address soumeter')
+        input#inputRelationAvecVictime(type='text', placeholder='Relation avec la victime')
+        br
+        input#inputPrenomVictime(type='text', placeholder='Prénom de la victime')
+        input#inputNomVictime(type='text', placeholder='Nom de la victime')
+        br
+        input#inputPrenomPere(type='text', placeholder='Prénom du pere de la victime')
+        input#inputNomPere(type='text', placeholder='Nom du pere de la victime')
+        input#inputPrenomMere(type='text', placeholder='Prénom de la mere de la victime')
+        input#inputNomMere(type='text', placeholder='Nom de la mere de la victime')
+        br
+        input#inputDateNaissance(type='text', placeholder='Date de naissance de la victime')
+        input#inputDateDeces(type='text', placeholder='Date de décès de la victime')
+        br
+        input#inputLieuNaissance(type='text', placeholder='Lieu de naissance de la victime')
+        input#inputLieuResidence(type='text', placeholder='Lieu de résidence de la victime')
+        input#LieuDeces(type='text', placeholder='Lieu de décès de la victime')
+        br
+        input#inputProfessionVictime(type='text', placeholder='Profession et lieu de travail')
+        input#inputTemoignane(type='text', placeholder='Témoignage sur la victime')
+        input#inputCirconstancesDeces(type='text', placeholder='Circonstances de décès')
+        br
+        button#btnAddUser Add Victime
+    // /ADD USER
+
+
+
+
+
     // USER INFO
-    #userInfo
-      h2 User Info
-      p
-        strong Name:
-        |  <span id='userInfoName'></span>
-        br
-        strong Age:
-        |  <span id='userInfoAge'></span>
-        br
-        strong Gender:
-        |  <span id='userInfoGender'></span>
-        br
-        strong Location:
-        |  <span id='userInfoLocation'></span>
+    //#userInfo
+      //h2 User Info
+      //p
+        //strong Name:
+        //|  <span id='userInfoName'></span>
+        //br
+        //strong Age:
+        //|  <span id='userInfoAge'></span>
+        //br
+        //strong Gender:
+        //|  <span id='userInfoGender'></span>
+        //br
+        //strong Location:
+        //|  <span id='userInfoLocation'></span>
     // /USER INFO
 
     // USER LIST
@@ -51,30 +87,6 @@ block content
         tbody
     // /USER LIST
 
-    // ADD USER
-    h2 Add Victime
-    #addUser
-      fieldset
-        input#inputPrenomVictime(type='text', placeholder='Prénom de la victime')
-        input#inputNomVictime(type='text', placeholder='Nom de la victime')
-        br
-        input#inputPrenomPere(type='text', placeholder='Prénom du pere de la victime')
-        input#inputNomPere(type='text', placeholder='Nom du pere de la victime')
-        input#inputPrenomMere(type='text', placeholder='Prénom de la mere de la victime')
-        input#inputNomMere(type='text', placeholder='Nom de la mere de la victime')
-        br
-        input#inputDateNaissance(type='text', placeholder='Date de naissance de la victime')
-        input#inputDateDeces(type='text', placeholder='Date de décès de la victime')
-        br
-        input#inputLieuNaissance(type='text', placeholder='Lieu de naissance de la victime')
-        input#inputLieuResidence(type='text', placeholder='Lieu de résidence de la victime')
-        input#LieuDeces(type='text', placeholder='Lieu de décès de la victime')
-        br
-        input#inputProfessionVictime(type='text', placeholder='Profession et lieu de travail')
-        input#inputTemoignane(type='text', placeholder='Témoignage sur la victime')
-        input#inputCirconstancesDeces(type='text', placeholder='Circonstances de décès')
-        br
-        button#btnAddUser Add Victime
-    // /ADD USER
+
 
   // /WRAPPER

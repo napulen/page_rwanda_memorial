@@ -101,6 +101,10 @@ function addUser(event) {
 
     // If it is, compile all user info into one object
     var newUser = {
+      'Prénom du la personne que soumet le formulaire': $('#addUser fieldset input#inputNomSoumeter').val(),
+      'Nom du la personne que soumet le formulaire': $('#addUser fieldset input#inputNomVictime').val(),
+      'Email address soumeter': $('#addUser fieldset input#inputEmailSoumeter').val(),
+      'Relation avec la victime': $('#addUser fieldset input#inputRelationAvecVictime').val(),
       'Prénom de la victime': $('#addUser fieldset input#inputPrenomVictime').val(),
       'Nom de la victime': $('#addUser fieldset input#inputNomVictime').val(),
       'Prénom du pere de la victime': $('#addUser fieldset input#inputPrenomPere').val(),
