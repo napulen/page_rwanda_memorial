@@ -21,7 +21,8 @@ npm start
 If ```node: not found``` error, [follow these instructions](https://github.com/animetosho/Nyuu/issues/14)
 
 ```
-ln -s /usr/bin/nodejs /usr/bin/node```
+ln -s /usr/bin/nodejs /usr/bin/node
+```
 
 and run it again.
 
@@ -31,7 +32,8 @@ Don't forget to open SSH
 
 ```
 sudo ufw allow OpenSSH
-sudo ufw enable```
+sudo ufw enable
+```
 
 
 A demo Node project will run on port ```3000```, and so you may need to open it in ```ufw```
