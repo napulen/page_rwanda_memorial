@@ -73,7 +73,7 @@ sudo apt-get install -y mongodb-org```
 
 #### Adjust the firewall
 
-MongoDB's default port is 27017. It should be accessible only from certain trusted locations. In case you (don't) want to make it accessible from everywhere:
+MongoDB's default port is ```27017```. It should be accessible only from certain trusted locations. In case you (don't) want to make it accessible from everywhere:
 
 ```
 sudo ufw allow 27017```
@@ -91,11 +91,12 @@ Run mongod and locate your data folder
 ```
 mongod --dbpath [wherever you put your data folder]```
 
-```
-sudo systemctl start mongod --dbpath [wherever you put your data folder]```
+
 
 
 TODO: Use systemctl or supervisor to start mongod and npm
 
 
 ### Add some data
+
+See ```notes.md```
