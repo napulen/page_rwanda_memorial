@@ -95,3 +95,17 @@ TODO: Use systemctl or supervisor to start mongod and npm
 ### Add some data
 
 See ```notes.md```
+
+### Test
+
+If everything went well you should be able to see the app GUI running at
+
+```
+localhost:3000
+```
+
+The list of all entries in the database should be accessible as a JSON list at
+
+```
+localhost:3000/victims/victimelist
+```
