@@ -52,7 +52,7 @@ Following [these instructions](https://www.digitalocean.com/community/tutorials/
 ```
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
 
-echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.1 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.1.list
+echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
 
 sudo apt-get update
 ```
