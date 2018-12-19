@@ -98,7 +98,7 @@ TODO: Use systemctl or supervisor to start mongod and npm
 
 See ```notes.md```
 
-### Test
+## Test
 
 If everything went well you should be able to see the app GUI running at
 
