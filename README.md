@@ -85,9 +85,8 @@ Within the repository home, or any other known location, create ```/data``` fold
 Run mongod and locate your data folder
 
 ```
-mongod --dbpath [wherever you put your data folder]```
-
-
+mongod --dbpath [wherever you put your data folder]
+```
 
 
 TODO: Use systemctl or supervisor to start mongod and npm
