@@ -100,7 +100,13 @@ See ```notes.md```
 
 ## Test
 
-If everything went well you should be able to see the app GUI running at
+If everything went well you, you can start the app
+
+```
+npm start
+```
+
+and should be able to see the app GUI running at
 
 ```
 localhost:3000
