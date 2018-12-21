@@ -23,6 +23,9 @@ $(document).ready(function() {
 // Fill table with data
 function populateTable() {
 
+  // Converts undefined into empty string
+  function emptyStringer (s) { if (s === undefined) { return '' } else { return s } }
+
   // Empty content string
   var tableContent = '';
 
@@ -35,24 +38,24 @@ function populateTable() {
     // For each item in our JSON, add a table row and cells to the content string
     $.each(data, function(){
       tableContent += '<tr>';
-      tableContent += '<td>' + this["Prénom de la personne que soumet le formulaire"] + '</td>';
-      tableContent += '<td>' + this["Nom de la personne que soumet le formulaire"] + '</td>';
-      tableContent += '<td><a href="#" class="linkshowuser" rel="' + this["Email address soumeter"] + '">' + this["Email address soumeter"] + '</a></td>';
-      tableContent += '<td>' + this["Relation avec la victime"] + '</td>';
-      tableContent += '<td>' + this["Prénom de la victime"] + '</td>';
-      tableContent += '<td>' + this["Nom de la victime"] + '</td>';
-      tableContent += '<td>' + this["Prénom du pere de la victime"] + '</td>';
-      tableContent += '<td>' + this["Nom du pere de la victime"] + '</td>';
-      tableContent += '<td>' + this["Prénom de la mere de la victime"] + '</td>';
-      tableContent += '<td>' + this["Nom de la mere de la victime"] + '</td>';
-      tableContent += '<td>' + this["Date de naissance de la victime"] + '</td>';
-      tableContent += '<td>' + this["Date de décès de la victime"] + '</td>';
-      tableContent += '<td>' + this["Lieu de naissance de la victime"] + '</td>';
-      tableContent += '<td>' + this["Lieu de résidence de la victime"] + '</td>';
-      tableContent += '<td>' + this["Lieu de décès de la victime"] + '</td>';
-      tableContent += '<td>' + this["Profession et lieu de travail"] + '</td>';
-      tableContent += '<td>' + this["Témoignage sur la victime"] + '</td>';
-      tableContent += '<td>' + this["Circonstances de décès"] + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Prénom de la personne que soumet le formulaire"]) + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Nom de la personne que soumet le formulaire"]) + '</td>';
+      tableContent += '<td><a href="#" class="linkshowuser" rel="' + emptyStringer(this["Email address soumeter"]) + '">' + this["Email address soumeter"] + '</a></td>';
+      tableContent += '<td>' + emptyStringer(this["Relation avec la victime"]) + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Prénom de la victime"]) + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Nom de la victime"]) + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Prénom du pere de la victime"]) + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Nom du pere de la victime"]) + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Prénom de la mere de la victime"]) + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Nom de la mere de la victime"]) + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Date de naissance de la victime"]) + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Date de décès de la victime"]) + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Lieu de naissance de la victime"]) + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Lieu de résidence de la victime"]) + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Lieu de décès de la victime"]) + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Profession et lieu de travail"]) + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Témoignage sur la victime"]) + '</td>';
+      tableContent += '<td>' + emptyStringer(this["Circonstances de décès"]) + '</td>';
       tableContent += '<td><a href="#" class="linkdeleteuser" rel="' + this._id + '">delete</a></td>';
       tableContent += '</tr>';
     });
