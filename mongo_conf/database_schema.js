@@ -22,7 +22,8 @@ db.runCommand( {
          },
          'Email address soumeter': {
             bsonType: 'string',
-            description: 'must be a string and is required'
+            pattern: "^.+\@.+$",
+            description: 'required and must be a valid email address'
          },
          'Relation avec la victime': {
             bsonType: 'string',
