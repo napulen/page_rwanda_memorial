@@ -25,8 +25,8 @@ block content
         input#inputPrenomMere(type='text', placeholder='Prénom de la mere de la victime')
         input#inputNomMere(type='text', placeholder='Nom de la mere de la victime')
         br
-        input#inputDateNaissance(type='text', placeholder='Date de naissance de la victime')
-        input#inputDateDeces(type='text', placeholder='Date de décès de la victime')
+        input#inputDateNaissance(type='text', placeholder='Date de naissance de la victime YYYY-MM-DD')
+        input#inputDateDeces(type='text', placeholder='Date de décès de la victime YYYY-MM-DD')
         br
         input#inputLieuNaissance(type='text', placeholder='Lieu de naissance de la victime')
         input#inputLieuResidence(type='text', placeholder='Lieu de résidence de la victime')
@@ -78,24 +78,24 @@ block content
     #userList
       table
         thead
-          th Prenom de la personne que soumet le formulaire
+          th Prénom de la personne que soumet le formulaire
           th Nom de la personne que soumet le formulaire
           th Email address
           th Relation avec la victime
           th Prénom de la victime
           th Nom de la victime
-          th Prenom du pere de la victime
+          th Prénom du pere de la victime
           th Nom du pere de la victime
-          th Prenom de la mere de la victime
+          th Prénom de la mere de la victime
           th Nom de la mere de la victime
-          th Date de naissance de la victime
-          th Date de deces de la victime
+          th Date de naissance de la victime (YYYY-MM-DD)
+          th Date de deces de la victime (YYYY-MM-DD)
           th Lieu de naissance de la victime
           th Lieu de residence de la victime
           th Lieu de deces de la victime
           th Profession et lieu de travail de la victime
           th Temoignage sur la victime
-          th Circonstances de deces (options)
+          th Circonstances de deces
           th Delete?
         tbody
     // /USER LIST

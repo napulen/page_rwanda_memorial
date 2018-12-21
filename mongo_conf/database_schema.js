@@ -22,7 +22,8 @@ db.runCommand( {
          },
          'Email address soumeter': {
             bsonType: 'string',
-            description: 'must be a string and is required'
+            pattern: "^.+\@.+$",
+            description: 'required and must be a valid email address'
          },
          'Relation avec la victime': {
             bsonType: 'string',
@@ -35,6 +36,16 @@ db.runCommand( {
          'Nom de la victime': {
             bsonType: 'string',
             description: 'must be a string and is required'
+         },
+         'Date de naissance de la victime': {
+            bsonType: 'string',
+            pattern: "^[0-9]{4}-(0[0-9]|1[0-2])-(0[0-9]|[0-2][0-9]|3[0-1])$",
+            description: 'must be a string with the form YYYY-MM-DD'
+         },
+         'Date de décès de la victime': {
+            bsonType: 'string',
+            pattern: "^[0-9]{4}-(0[0-9]|1[0-2])-(0[0-9]|[0-2][0-9]|3[0-1])$",
+            description: 'must be a string with the form YYYY-MM-DD'
          }
       }
    } },
