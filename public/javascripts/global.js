@@ -127,7 +127,7 @@ function addUser(event) {
       'Lieu de décès de la victime': $('#addUser fieldset input#LieuDeces').val(),
       'Profession et lieu de travail': $('#addUser fieldset input#inputProfessionVictime').val(),
       'Témoignage sur la victime': $('#addUser fieldset input#inputTemoignane').val(),
-      'Circonstances de décès': $('#addUser fieldset input#inputCirconstancesDeces').val(),
+      'Circonstances de décès': $('#addUser fieldset select#inputCirconstancesDeces').val(),
       // 'Circonstances de décès': null
     }
 
