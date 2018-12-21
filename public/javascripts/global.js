@@ -40,7 +40,7 @@ function populateTable() {
       tableContent += '<tr>';
       tableContent += '<td>' + emptyStringer(this["Prénom de la personne que soumet le formulaire"]) + '</td>';
       tableContent += '<td>' + emptyStringer(this["Nom de la personne que soumet le formulaire"]) + '</td>';
-      tableContent += '<td><a href="#" class="linkshowuser" rel="' + emptyStringer(this["Email address soumeter"]) + '">' + this["Email address soumeter"] + '</a></td>';
+      tableContent += '<td><a href="#" class="linkshowuser" rel="' + this["Email address soumeter"] + '">' + emptyStringer(this["Email address soumeter"]) + '</a></td>';
       tableContent += '<td>' + emptyStringer(this["Relation avec la victime"]) + '</td>';
       tableContent += '<td>' + emptyStringer(this["Prénom de la victime"]) + '</td>';
       tableContent += '<td>' + emptyStringer(this["Nom de la victime"]) + '</td>';
