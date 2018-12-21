@@ -22,7 +22,7 @@ db.runCommand( {
          },
          'Email address soumeter': {
             bsonType: 'string',
-            pattern: "^.+\@.+$",
+            pattern: "[a-zA-z0-9.-]+\@[a-zA-z0-9.-]+.[a-zA-Z]+",
             description: 'required and must be a valid email address'
          },
          'Relation avec la victime': {
