@@ -35,7 +35,7 @@ function populateTable() {
     // For each item in our JSON, add a table row and cells to the content string
     $.each(data, function(){
       tableContent += '<tr>';
-      tableContent += '<td>' + this["Prenom de la personne que soumet le formulaire"] + '</td>';
+      tableContent += '<td>' + this["Prénom de la personne que soumet le formulaire"] + '</td>';
       tableContent += '<td>' + this["Nom de la personne que soumet le formulaire"] + '</td>';
       tableContent += '<td><a href="#" class="linkshowuser" rel="' + this["Email Address"] + '">' + this["Email Address"] + '</a></td>';
       tableContent += '<td>' + this["Relation avec la victime"] + '</td>';
@@ -86,23 +86,29 @@ function showUserInfo(event) {
 
 };
 
+// function nullifier(s) {
+//   if (s === '') {
+//     return null
+//   }
+// }
+
 // Add User
 function addUser(event) {
   event.preventDefault();
 
   // Super basic validation - increase errorCount variable if any fields are blank
   var errorCount = 0;
-  $('#addUser input').each(function(index, val) {
-    if($(this).val() === '') { errorCount++; }
-  });
+  // $('#addUser input').each(function(index, val) {
+  //   if($(this).val() === '') { errorCount++; }
+  // });
 
   // Check and make sure errorCount's still at zero
   if(errorCount === 0) {
 
     // If it is, compile all user info into one object
     var newUser = {
-      'Prénom du la personne que soumet le formulaire': $('#addUser fieldset input#inputNomSoumeter').val(),
-      'Nom du la personne que soumet le formulaire': $('#addUser fieldset input#inputNomVictime').val(),
+      'Prénom de la personne que soumet le formulaire': $('#addUser fieldset input#inputPrenomSoumeter').val(),
+      'Nom de la personne que soumet le formulaire': $('#addUser fieldset input#inputNomSoumeter').val(),
       'Email address soumeter': $('#addUser fieldset input#inputEmailSoumeter').val(),
       'Relation avec la victime': $('#addUser fieldset input#inputRelationAvecVictime').val(),
       'Prénom de la victime': $('#addUser fieldset input#inputPrenomVictime').val(),
@@ -118,9 +124,13 @@ function addUser(event) {
       'Lieu de décès de la victime': $('#addUser fieldset input#LieuDeces').val(),
       'Profession et lieu de travail': $('#addUser fieldset input#inputProfessionVictime').val(),
       'Témoignage sur la victime': $('#addUser fieldset input#inputTemoignane').val(),
-      'Circonstances de décès': $('#addUser fieldset input#inputCirconstancesDeces').val()
+      'Circonstances de décès': $('#addUser fieldset input#inputCirconstancesDeces').val(),
+      // 'Circonstances de décès': null
     }
 
+    // Droping the empty key values, this will be used for schema validation
+    Object.keys(newUser).forEach(k => (!newUser[k] && newUser[k] !== undefined) && delete newUser[k]);
+    
     // Use AJAX to post the object to our adduser service
     $.ajax({
       type: 'POST',
@@ -142,7 +152,8 @@ function addUser(event) {
       else {
 
         // If something goes wrong, alert the error message that our service returned
-        alert('Error: ' + response.msg);
+        // alert('Error: ' + response.msg);
+        alert('Please fill in all fields');
 
       }
     });
