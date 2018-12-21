@@ -37,7 +37,7 @@ function populateTable() {
       tableContent += '<tr>';
       tableContent += '<td>' + this["Prénom de la personne que soumet le formulaire"] + '</td>';
       tableContent += '<td>' + this["Nom de la personne que soumet le formulaire"] + '</td>';
-      tableContent += '<td><a href="#" class="linkshowuser" rel="' + this["Email Address"] + '">' + this["Email Address"] + '</a></td>';
+      tableContent += '<td><a href="#" class="linkshowuser" rel="' + this["Email address soumeter"] + '">' + this["Email address soumeter"] + '</a></td>';
       tableContent += '<td>' + this["Relation avec la victime"] + '</td>';
       tableContent += '<td>' + this["Prénom de la victime"] + '</td>';
       tableContent += '<td>' + this["Nom de la victime"] + '</td>';
@@ -130,7 +130,7 @@ function addUser(event) {
 
     // Droping the empty key values, this will be used for schema validation
     Object.keys(newUser).forEach(k => (!newUser[k] && newUser[k] !== undefined) && delete newUser[k]);
-    
+
     // Use AJAX to post the object to our adduser service
     $.ajax({
       type: 'POST',
