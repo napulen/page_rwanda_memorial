@@ -100,9 +100,12 @@ See ```notes.md```
 
 ## Test
 
-If everything went well you, you can start the app
+If everything went well you, you can load the db schema
+
+and start the app
 
 ```
+mongo < mongo_conf/database_schema.js
 npm start
 ```
 
