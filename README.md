@@ -14,7 +14,7 @@ Install and run npm
 
 ```
 apt install npm
-npm install
+npm install --no-bin-links # Required flag for symbolic links in Vagrant
 npm start
 ```
 
