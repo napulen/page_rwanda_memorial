@@ -14,7 +14,7 @@ Install and run npm
 
 ```
 apt install npm
-nmp install
+npm install
 npm start
 ```
 
